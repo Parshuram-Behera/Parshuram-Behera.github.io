@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Parshuram Behera - GitHub Pages ready single-file site
+    Instructions: create a new GitHub repo named <your-username>.github.io (e.g. Parshuram-Behera.github.io)
+    Add this file as index.html at the repository root and push. GitHub Pages will serve it automatically.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parshuram Behera — Android Developer</title>
+  <meta name="description" content="Parshuram Behera — Android App developer and tech enthusiast." />
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain-wordmark.svg">
+  <style>
+    :root{
+      --bg:#0d1117;
+      --card:#0f1720;
+      --muted:#8b949e;
+      --accent:#58a6ff;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max:1000px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{background:var(--bg); color:#c9d1d9; margin:24px; display:flex; justify-content:center;}
+    .wrap{width:100%; max-width:var(--max)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:var(--radius); padding:28px; box-shadow:0 6px 20px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03)}
+    header{display:flex; gap:18px; align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;overflow:hidden;flex:0 0 84px; background:linear-gradient(90deg,#1f2937,#111827); display:flex;align-items:center;justify-content:center}
+    .avatar img{width:70%;height:70%;object-fit:contain}
+    h1{margin:0;font-size:26px;color:var(--accent)}
+    p.lead{margin:6px 0 12px;color:var(--muted)}
+
+    .icon-grid{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 22px}
+    .icon-grid img{width:80px;height:80px;object-fit:contain;border-radius:8px;background:var(--glass);padding:8px}
+
+    h2{color:#9ee6ff;margin-top:18px}
+    ul.skills{line-height:1.7;color:#c9d1d9}
+    .stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .stats img{border-radius:10px;max-width:100%;}
+
+    .contact{margin-top:18px}
+    .social a{display:inline-block;margin-right:10px}
+    .social img{width:30px;height:30px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:640px){
+      header{flex-direction:row;align-items:center}
+      .avatar{width:64px;height:64px}
+      h1{font-size:20px}
+      .icon-grid img{width:64px;height:64px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="avatar" aria-hidden>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain-wordmark.svg" alt="Android logo">
+        </div>
+        <div>
+          <h1>Hi there 👋</h1>
+          <p class="lead"><em>I'm Parshuram, a passionate Android App developer and tech enthusiast.</em></p>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px">GitHub: <strong>Parshuram-Behera</strong></div>
+        </div>
+      </header>
+
+      <!-- Tech icons (same as your README) -->
+      <div class="icon-grid" role="img" aria-label="tech icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain-wordmark.svg" alt="Android" title="Android">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-plain-wordmark.svg" alt="Kotlin" title="Kotlin">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="Java" title="Java">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" title="C">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" alt="Canva" title="Canva">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original-wordmark.svg" alt="Jetpack Compose" title="Jetpack Compose">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" alt="HTML5" title="HTML5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" title="Android Studio">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" title="Figma">
+      </div>
+
+      <section>
+        <h2>🛠️ Skills</h2>
+        <ul class="skills">
+          <li><strong>Programming Languages:</strong> Java, Kotlin, C</li>
+          <li><strong>Scripting / Markup:</strong> XML, HTML</li>
+          <li><strong>Tools:</strong> Android Studio, IntelliJ IDEA, VS Code, Git, etc.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📊 Real-Time Stats</h2>
+        <div class="stats">
+          <!-- GitHub readme-stats images (keep same query parameters as README) -->
+          <img src="https://github-readme-stats.vercel.app/api?username=Parshuram-Behera&show_icons=true&theme=radical&hide=" alt="GitHub Stats">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Parshuram-Behera&theme=radical&layout=compact" alt="Top Languages">
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>📫 Contact Me</h2>
+        <div class="social">
+          <a href="https://linkedin.com/in/parshurambehera7735" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+          </a>
+          <!-- Add more links here (GitHub, Twitter, email) if you want -->
+        </div>
+      </section>
+
+      <footer>
+        Hosted with ❤️ on GitHub Pages — built from your README.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
