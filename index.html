@@ -1,148 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Timeline</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #161b22;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    header a img {
-      width: 30px;
-      height: 30px;
-      filter: brightness(0) invert(1);
-    }
-    .timeline {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      position: relative;
-    }
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: #30363d;
-    }
-    .step {
-      position: relative;
-      margin-left: 50px;
-      margin-bottom: 50px;
-      padding: 10px;
-      background: #161b22;
-      border-radius: 8px;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .step.active {
-      background: #238636;
-      transform: scale(1.05);
-    }
-    .step::before {
-      content: "";
-      position: absolute;
-      left: -34px;
-      top: 15px;
-      width: 20px;
-      height: 20px;
-      background: #30363d;
-      border-radius: 50%;
-      border: 3px solid #0d1117;
-      transition: background 0.3s;
-    }
-    .step.active::before {
-      background: #238636;
-    }
-    h3 {
-      margin: 0 0 5px;
-    }
-    p {
-      margin: 0;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Parshuram Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: white;
+  }
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #161b22;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    margin-left: 15px;
+  }
+  nav img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+  }
+  /* Content */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #58a6ff;
+  }
+  table {
+    margin-top: 20px;
+  }
+  td {
+    padding: 10px;
+  }
+  /* Timeline */
+  .timeline {
+    position: relative;
+    margin: 50px 0;
+    padding-left: 40px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 4px;
+    height: 100%;
+    background: #30363d;
+  }
+  .step {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .step::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background: #30363d;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+  .step.active::before {
+    background: #2ea043;
+  }
+  .step-content {
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .step.active .step-content {
+    background: #238636;
+    transform: scale(1.02);
+  }
+</style>
 </head>
 <body>
-  <!-- Social Nav -->
-  <header>
-    <a href="https://linkedin.com/in/parshurambehera7735" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
-    </a>
-    <a href="https://github.com/Parshuram-Behera" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-    </a>
-    <a href="https://twitter.com" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" />
-    </a>
-  </header>
 
-  <div id="root"></div>
+<!-- Navbar -->
+<nav>
+  <a href="https://github.com/Parshuram-Behera" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></a>
+  <a href="https://linkedin.com/in/parshurambehera7735" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
+  <a href="https://x.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="X"></a>
+</nav>
 
-  <!-- React & Babel -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div class="container">
+  <!-- README Content -->
+  <h1>Hi there 👋</h1>
+  <p><em>I'm Parshuram, a passionate Android App developer and tech enthusiast.</em></p>
 
-  <!-- React Code -->
-  <script type="text/babel">
-    const { useEffect, useState } = React;
+  <table>
+    <tr>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" width="80" height="80" alt="Android" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-plain-wordmark.svg" width="90" height="90" alt="Kotlin" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" width="80" height="80" alt="Java" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="80" height="80" alt="C" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" width="80" height="80" alt="Canva" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original-wordmark.svg" width="80" height="80" alt="Jetpack Compose" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="80" height="80" alt="HTML" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" width="80" height="80" alt="Android Studio" /></td>
+      <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="80" height="80" alt="Figma" /></td>
+    </tr>          
+  </table>
 
-    function Timeline() {
-      const projects = [
-        { title: "Project 1", desc: "Android App using Kotlin" },
-        { title: "Project 2", desc: "Java-based desktop tool" },
-        { title: "Project 3", desc: "HTML/CSS Portfolio Website" },
-        { title: "Project 4", desc: "Jetpack Compose UI Demo" },
-        { title: "Project 5", desc: "Figma UI Design" },
-      ];
+  <h2>🛠️ Skills</h2>
+  <ul>
+    <li>Programming Languages: Java , Kotlin , C</li>
+    <li>Scripting Languages: XML , HTML</li>
+    <li>Tools: Android Studio , IntelliJ IDEA , VS Code , Git</li>
+  </ul>
 
-      const [activeStep, setActiveStep] = useState(0);
+  <h2>📊 Real-Time Stats</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=Parshuram-Behera&show_icons=true&theme=radical" alt="GitHub Stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Parshuram-Behera&theme=radical&layout=compact" alt="Top Languages">
 
-      useEffect(() => {
-        const handleScroll = () => {
-          const steps = document.querySelectorAll(".step");
-          let index = 0;
-          steps.forEach((step, i) => {
-            const rect = step.getBoundingClientRect();
-            if (rect.top < window.innerHeight / 2) {
-              index = i;
-            }
-          });
-          setActiveStep(index);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-      }, []);
+  <h2>📫 Contact Me</h2>
+  <a href="https://linkedin.com/in/parshurambehera7735">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="30" height="30" />
+  </a>
 
-      return (
-        <div className="timeline">
-          {projects.map((p, i) => (
-            <div key={i} className={`step ${activeStep === i ? "active" : ""}`}>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      );
-    }
+  <!-- Project Timeline -->
+  <h2 style="margin-top:60px;">🚀 Projects Timeline</h2>
+  <div class="timeline" id="timeline">
+    <div class="step"><div class="step-content"><strong>Project 1</strong><br>Android App using Kotlin</div></div>
+    <div class="step"><div class="step-content"><strong>Project 2</strong><br>Java-based desktop tool</div></div>
+    <div class="step"><div class="step-content"><strong>Project 3</strong><br>HTML/CSS Portfolio Website</div></div>
+    <div class="step"><div class="step-content"><strong>Project 4</strong><br>Jetpack Compose UI Demo</div></div>
+    <div class="step"><div class="step-content"><strong>Project 5</strong><br>Figma UI Design</div></div>
+  </div>
+</div>
 
-    ReactDOM.createRoot(document.getElementById("root")).render(<Timeline />);
-  </script>
+<script>
+  const steps = document.querySelectorAll('.step');
+  window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.8;
+    steps.forEach(step => {
+      const boxTop = step.getBoundingClientRect().top;
+      if (boxTop < trigger) {
+        step.classList.add('active');
+      } else {
+        step.classList.remove('active');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
